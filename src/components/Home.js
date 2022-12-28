@@ -1,13 +1,10 @@
 import React from "react";
-import { FaShoppingCart } from 'react-icons/fa';
 
 export default function Home(props) {
-    console.log("home",props.productData)
+    console.log("home",props)
     return<>
-    <div >
-        <FaShoppingCart className="cart-item"/>
-    </div>
-    <h1>home component</h1>
+    
+    <h1>Product Cart</h1>
     <div className="cart-wrapper">
         <div className="image-wrapper item">
             <img alt="mobile" src="https://m.media-amazon.com/images/I/41q7YUp4H1L._SX300_SY300_QL70_FMwebp_.jpg"/>
@@ -26,6 +23,10 @@ export default function Home(props) {
                 price:300,
                 name: "mobile"
             })}>Add to cart</button>
+        </div>
+        <div className="button-wrapper item">
+            <button onClick={()=>
+            props.removeToCartHandler()}>Remove to cart</button>
         </div>
     </div>
     </>
