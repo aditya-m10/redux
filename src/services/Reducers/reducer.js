@@ -5,10 +5,11 @@ const intialstate={
 export default function cardItems(state=intialstate,action){
     switch (action.type){
         case ADD_TO_CART:
-            return [
+            console.log("reducer", action)
+            return {
                 ...state,
-                {productData:action.data}
-            ]
+                productData: action.data
+            }
         default:
             return state
     } 

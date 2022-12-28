@@ -1,7 +1,8 @@
 import React from "react";
 import { FaShoppingCart } from 'react-icons/fa';
 
-export default function Home() {
+export default function Home(props) {
+    console.log("home",props.productData)
     return<>
     <div >
         <FaShoppingCart className="cart-item"/>
@@ -20,7 +21,11 @@ export default function Home() {
             </span>
         </div>
         <div className="button-wrapper item">
-            <button>Add to cart</button>
+            <button onClick={()=>
+            props.addToCartHandler({
+                price:300,
+                name: "mobile"
+            })}>Add to cart</button>
         </div>
     </div>
     </>
