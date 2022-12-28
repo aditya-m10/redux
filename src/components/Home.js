@@ -26,7 +26,7 @@ export default function Home(props) {
         </div>
         <div className="button-wrapper item">
             <button onClick={()=>
-            props.removeToCartHandler()}>Remove to cart</button>
+            props.removeToCartHandler()} style={{background: "red" ,border: "red"}}>Remove to cart</button>
         </div>
     </div>
     </>

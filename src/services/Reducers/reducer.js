@@ -12,8 +12,7 @@ export default function cardItems(state=[],action){
             ]
         case REMOVE_TO_CART:
             state.pop()
-            return [
-                    ...state]
+            return [...state]
             
         default:
             return state
