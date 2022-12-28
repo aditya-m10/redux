@@ -1,6 +1,11 @@
 import React from "react";
+import { FaShoppingCart } from 'react-icons/fa';
+
 export default function Home() {
     return<>
+    <div >
+        <FaShoppingCart className="cart-item"/>
+    </div>
     <h1>home component</h1>
     <div className="cart-wrapper">
         <div className="image-wrapper item">
